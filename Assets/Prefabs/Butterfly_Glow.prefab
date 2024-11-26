@@ -145,7 +145,7 @@ MeshRenderer:
   m_RenderingLayerMask: 257
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 1eca18427cc79454e8d1c5a80ce32292, type: 2}
+  - {fileID: 2100000, guid: f7a44e9556298ba4d8e4bee2ca3229a6, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -353,7 +353,7 @@ MeshRenderer:
   m_RenderingLayerMask: 257
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 1eca18427cc79454e8d1c5a80ce32292, type: 2}
+  - {fileID: 2100000, guid: f7a44e9556298ba4d8e4bee2ca3229a6, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -474,7 +474,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &3166483118555703140
 Transform:
   m_ObjectHideFlags: 0
@@ -772,7 +772,7 @@ MeshRenderer:
   m_RenderingLayerMask: 257
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 1eca18427cc79454e8d1c5a80ce32292, type: 2}
+  - {fileID: 2100000, guid: f7a44e9556298ba4d8e4bee2ca3229a6, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -1105,7 +1105,7 @@ MeshRenderer:
   m_RenderingLayerMask: 257
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 1eca18427cc79454e8d1c5a80ce32292, type: 2}
+  - {fileID: 2100000, guid: f7a44e9556298ba4d8e4bee2ca3229a6, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -1335,9 +1335,9 @@ GameObject:
   - component: {fileID: 1144173267404968619}
   - component: {fileID: 8377569661078475236}
   - component: {fileID: 8725856822511354766}
-  - component: {fileID: -4091857757359874412}
+  - component: {fileID: -2562720026741196046}
   m_Layer: 0
-  m_Name: Butterfly
+  m_Name: Butterfly_Glow
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1543,7 +1543,7 @@ MonoBehaviour:
     m_NumColorKeys: 3
     m_NumAlphaKeys: 2
   movementBounds: {x: 400, y: 1000, z: 400}
---- !u!114 &-4091857757359874412
+--- !u!114 &-2562720026741196046
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1552,10 +1552,21 @@ MonoBehaviour:
   m_GameObject: {fileID: 6637366489791807162}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 891d8b6bc38d47245a4b281f3b7d779f, type: 3}
+  m_Script: {fileID: 11500000, guid: e4ce96aefea565544ba8c07e3206aea7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sharedGlowMaterial: {fileID: 2100000, guid: f7a44e9556298ba4d8e4bee2ca3229a6, type: 2}
+  wingMaterials:
+  - {fileID: 2100000, guid: f7a44e9556298ba4d8e4bee2ca3229a6, type: 2}
+  - {fileID: 2100000, guid: 2b23eb8f5c2fd9d429827df89b633c0f, type: 2}
+  - {fileID: 2100000, guid: 7efd6921a01e1d94098bbf372a2e038d, type: 2}
+  - {fileID: 2100000, guid: 57b09000acc7fe641b6e04da2b6a4a68, type: 2}
+  - {fileID: 2100000, guid: 83df0b8513d7d2c4f833241f73c53cd2, type: 2}
+  - {fileID: 2100000, guid: 6f40d38a4ad3359498fc7c68ecf1f567, type: 2}
+  - {fileID: 2100000, guid: 4334fefbdff2ab347b6490255462b8b3, type: 2}
+  leftWingLow: {fileID: 8211980218349994473}
+  leftWingHigh: {fileID: 5025056969678780912}
+  rightWingLow: {fileID: 1322335658506784950}
+  rightWingHigh: {fileID: 3169842087588839884}
 --- !u!1 &6952752089660034844
 GameObject:
   m_ObjectHideFlags: 0
