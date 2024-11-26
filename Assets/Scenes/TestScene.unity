@@ -513,10 +513,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 16c11a7b7175f3e4698a546fbb1ac739, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  butterflyPrefab: {fileID: 6637366489791807162, guid: 18eb996ac276e1f4797b53e9642a6972,
+  butterflyPrefab: {fileID: 4361961416265732770, guid: e235bdc968187cf409dcfa8ac174ae11,
     type: 3}
   butterflyHolder: {fileID: 1811810736}
-  maxButterflies: 250
+  maxButterflies: 150
   spawnArea: {x: 100, y: 20, z: 100}
 --- !u!1 &1811810735
 GameObject:

@@ -9,15 +9,23 @@ public class ButterflyGlow : MonoBehaviour
     public Transform rightWingLow;
     public Transform rightWingHigh;
 
+    public ParticleSystem trailParticleSystem; // Reference to the trail's particle system
+
     void Start()
     {
         // Apply random material to all wing parts
-        ApplyRandomWingMaterialToAll();
+        Material chosenMaterial = ApplyRandomWingMaterialToAll();
+
+        // Match the trail particle system color to the glow color
+        if (chosenMaterial != null)
+        {
+            SetTrailStartColor(chosenMaterial);
+        }
     }
 
-    public void ApplyRandomWingMaterialToAll()
+    public Material ApplyRandomWingMaterialToAll()
     {
-        if (wingMaterials.Length == 0) return;
+        if (wingMaterials.Length == 0) return null;
 
         // Choose a single random material from the list
         Material chosenMaterial = wingMaterials[Random.Range(0, wingMaterials.Length)];
@@ -27,6 +35,8 @@ public class ButterflyGlow : MonoBehaviour
         AssignMaterialToWingPart(leftWingHigh, chosenMaterial);
         AssignMaterialToWingPart(rightWingLow, chosenMaterial);
         AssignMaterialToWingPart(rightWingHigh, chosenMaterial);
+
+        return chosenMaterial;
     }
 
     private void AssignMaterialToWingPart(Transform wingPart, Material material)
@@ -45,6 +55,21 @@ public class ButterflyGlow : MonoBehaviour
             }
 
             renderer.materials = newMaterials;
+        }
+    }
+
+    private void SetTrailStartColor(Material glowMaterial)
+    {
+        if (trailParticleSystem == null || glowMaterial == null) return;
+
+        // Get the color from the glow material
+        if (glowMaterial.HasProperty("_Color"))
+        {
+            Color glowColor = glowMaterial.color;
+
+            // Modify the start color of the particle system
+            var mainModule = trailParticleSystem.main;
+            mainModule.startColor = glowColor;
         }
     }
 }

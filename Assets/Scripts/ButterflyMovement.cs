@@ -8,7 +8,6 @@ public class ButterflyMovement : MonoBehaviour
     public float minScale = 0.3f; // Minimum scale of the butterfly
     public float maxScale = 0.5f; // Maximum scale of the butterfly
     public Transform frontPointer; // The front pointer for movement
-    public Gradient[] trailGradients; // Array of gradients to randomize from
 
     public Vector3 movementBounds = new Vector3(800f, 600f, 600f); // Bounds for movement
 
@@ -20,17 +19,6 @@ public class ButterflyMovement : MonoBehaviour
         // Set a random scale
         float scale = Random.Range(minScale, maxScale);
         transform.localScale = new Vector3(scale, scale, scale);
-
-        // Randomize trail gradient
-        if (trailGradients.Length > 0)
-        {
-            TrailRenderer trail = GetComponentInChildren<TrailRenderer>();
-            if (trail != null)
-            {
-                Gradient randomGradient = trailGradients[Random.Range(0, trailGradients.Length)];
-                trail.colorGradient = randomGradient;
-            }
-        }
 
         // Initialize pointer direction
         SetRandomPointerDirection();
