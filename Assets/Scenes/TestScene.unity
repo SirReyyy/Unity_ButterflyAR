@@ -513,7 +513,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 16c11a7b7175f3e4698a546fbb1ac739, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  butterflyPrefab: {fileID: 4361961416265732770, guid: e235bdc968187cf409dcfa8ac174ae11,
+  butterflyPrefab: {fileID: 1675880300219878846, guid: e235bdc968187cf409dcfa8ac174ae11,
     type: 3}
   butterflyHolder: {fileID: 1811810736}
   maxButterflies: 150

@@ -70,6 +70,11 @@ public class ButterflyGlow : MonoBehaviour
             // Modify the start color of the particle system
             var mainModule = trailParticleSystem.main;
             mainModule.startColor = glowColor;
+
+            // Randomize the start lifetime between 3.0 and 10.0
+            mainModule.startLifetime = Random.Range(3.0f, 10.0f);
+
+            Debug.Log($"Set trail start color to: {glowColor} and lifetime to: {mainModule.startLifetime.constant}");
         }
     }
 }
